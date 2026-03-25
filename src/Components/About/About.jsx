@@ -20,7 +20,7 @@ const About = ({ data, openPopup }) => {
   // fallback content (agar server band ho)
   const defaultAbout = {
     heading:
-      "Our comprehensive and advanced curriculum helps you to get <span>placed in Big Companies</span>",
+      "Our comprehensive and advanced curriculum helps you to get <span>Placed in Big Companies</span>",
 
     description:
       "Our comprehensive and advanced curriculum is designed to help you secure placements in top companies. SkillServe Academy focuses on practical, job-ready training through a blended learning approach that combines classroom sessions, digital tools, and hands-on experience in industry-simulated environments. </br> </br>   Aligned with Industry 4.0, LEAN, QMS, and the National Credit Framework (NCrF), our programs ensure real-world readiness while offering recognized, transferable credits—bridging the gap between learning and employment.",

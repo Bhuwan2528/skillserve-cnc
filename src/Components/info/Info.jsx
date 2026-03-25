@@ -4,11 +4,11 @@ import "./Info.css";
 
 const data = [
   { icon: <FaCalendarAlt />, title: "Next Batch", subtitle: "Starting soon..." },
-  { icon: <FaClock />, title: "Duration", subtitle: "3-11 Months" },
-  { icon: <FaCertificate />, title: "Certificates", subtitle: "20+ Certificates" },
+  { icon: <FaClock />, title: "Duration", subtitle: "Avg. 2 Months" },
+  { icon: <FaCertificate />, title: "Digilocker Certificate", subtitle: "1 Certificates" },
   { icon: <FaUserTie />, title: "Placement", subtitle: "100% Support" },
-  { icon: <FaUsers />, title: "52,000+", subtitle: "Students Passed" },
-  { icon: <FaHandshake />, title: "700+", subtitle: "Placement Partners" },
+  { icon: <FaUsers />, title: "55,000+", subtitle: "Students Passed" },
+  { icon: <FaHandshake />, title: "750+", subtitle: "Placement Partners" },
   { icon: <FaAward />, title: "10+", subtitle: "Years of Trust" },
   { icon: <FaChalkboardTeacher />, title: "100+", subtitle: "Expert Mentors" },
 ];
