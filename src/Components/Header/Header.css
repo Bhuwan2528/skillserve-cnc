@@ -1,0 +1,172 @@
+.header{
+    /* height: 200vh; */
+    max-width: 100%;
+    overflow: hidden;
+    background-image: url(../../assets/bg1.png);
+    background-position: top;
+    background-size: cover;
+    position: relative;
+}
+.navbar {
+  width: 100%;
+  height: fit-content;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 3rem;
+  background: transparent;
+}
+.sticky-nav{
+    background: rgb(234, 236, 238);
+    backdrop-filter: blur(10px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #222;
+}
+.navbar img{
+    height: 100px;
+    cursor: pointer;
+}
+.navbar ul li{
+    list-style: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+    font-size: 18px;
+}
+.navbar ul li:hover{
+    transform: translateY(-30%);
+}
+.side-elements{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.sticky-nav .btn, .sticky-nav svg{
+  color: black;
+  fill: black;
+}
+.hero-text {
+    width: 75%;
+    margin: auto;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+.sticky-nav .hero-text{
+  color: black
+}
+.hero-text span {
+    background: linear-gradient(to right, #a200ff, #ff0180);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+    letter-spacing: 1px;
+    margin: auto;
+}
+.bottom-element{
+  position: fixed;
+  height: 70px;
+  width: 70px;
+  background: white;
+  border-radius: 50%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.bottom-left-element{
+  bottom: 15px;
+  left: 15px;
+}
+.bottom-right-element{
+  bottom: 15px;
+  right: 15px;
+}
+.bottom-element svg{
+  fill: rgb(2, 16, 32);
+  font-size: 40px;
+  font-weight: 900;
+}
+.bottom-left-element svg{
+  fill: rgb(4, 104, 12);
+}
+
+
+
+/* ================= SCROLL TO TOP BUTTON ================= */
+
+.scroll-top-btn{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #ff7b00, #ff0055);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 20;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  transition: all 0.3s ease;
+
+  animation: floatBtn 2.5s ease-in-out infinite;
+}
+
+/* hover */
+.scroll-top-btn:hover{
+  transform: translateY(-6px) scale(1.08);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.35);
+}
+
+/* click */
+.scroll-top-btn:active{
+  transform: scale(0.9);
+}
+
+/* floating animation */
+@keyframes floatBtn {
+  0%{ transform: translateY(0px);}
+  50%{ transform: translateY(-8px);}
+  100%{ transform: translateY(0px);}
+}
+
+
+
+
+@media(max-width: 450px){
+  .navbar{
+    padding: 1rem;
+  }
+  .bottom-element{
+    display: flex;
+    height: 70px;
+    width: 70px;
+  }
+  .bottom-element svg{
+    font-size: 32px;
+  }
+  .scroll-top-btn{
+    bottom: 100px; /* 👈 call button ke upar */
+    right: 15px;
+    height: 55px;
+    width: 55px;
+    font-size: 20px;
+  }
+}

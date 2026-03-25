@@ -1,0 +1,85 @@
+.placement-partners {
+  width: 100%;
+  background: transparent; /* parent transparent */
+  overflow: hidden;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 6rem 0;
+}
+
+.placement-partners h2{
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem auto;
+    margin-top: 0;
+}
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-track {
+  display: flex;
+  gap: 20px;
+  animation: scroll 30s linear infinite;
+}
+
+.slider-right-to-left .slide-track {
+  animation: scroll-reverse 30s linear infinite;
+}
+
+.slide {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* FIXED SIZE BOX */
+.img-box {
+  width: 200px;          /* fixed width */
+  height: 150px;         /* fixed height */
+  background: white;     /* white background for PNGs */
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.img-box img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* keeps aspect ratio */
+  display: block;
+}
+
+/* Animations */
+@keyframes scroll {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes scroll-reverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+  .img-box {
+    width: 120px;
+    height: 80px;
+  }
+}
+
+@media(max-width: 480px) {
+  .img-box {
+    width: 100px;
+    height: 70px;
+  }
+}

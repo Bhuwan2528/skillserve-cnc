@@ -1,0 +1,24 @@
+.bottom{
+  max-width: 1300px;
+  margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info{
+    flex-basis: 65%;
+}
+.form{
+    flex-basis: 35%;
+}
+@media(max-width: 450px){
+  .bottom{
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .form{
+    
+    padding: 10px;
+  }
+}
