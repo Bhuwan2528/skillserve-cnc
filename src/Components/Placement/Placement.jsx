@@ -7,7 +7,7 @@ import p2 from '../../assets/p2.webp';
 import p3 from '../../assets/p3.png';
 import p4 from '../../assets/p4.png';
 import p5 from '../../assets/p5.png';
-import p6 from '../../assets/p6.png';
+import p6 from '../../assets/p23.png';
 import p7 from '../../assets/p7.png';
 import p8 from '../../assets/p8.webp';
 import p9 from '../../assets/p9.png';

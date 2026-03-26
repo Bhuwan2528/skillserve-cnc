@@ -12,14 +12,14 @@
   gap: 60px;
   flex-wrap: wrap;
 
-  background: rgba(5, 5, 5, 0.534);
+  background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(14px);
   border-radius: 30px;
 
   padding: 40px 60px;
 
   box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.08);
 }
 
 /* LOGO */

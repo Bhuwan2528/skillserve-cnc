@@ -10,22 +10,22 @@ import "aos/dist/aos.css";
 
 const fallbackChoose = [
   {
-    image: advance,
-    title: "Advanced Curriculum",
+    image: "https://media.istockphoto.com/id/1919863292/photo/e-learning-education-internet-lessons-and-online-learning-with-webinars-video-tutorials.jpg?s=612x612&w=0&k=20&c=zWAqp6FGH-zm6b0Os_CssxubtrgKh1MyFeMgelFZbOg=",
+    title: "Industry-Focused Learning",
     description:
-      "Our courses are designed with an advanced curriculum that blends theory with real-world applications. Each module is crafted by industry professionals to ensure you learn the latest tools, strategies, and best practices. <br><br>  We focus on hands-on training, live projects, and case studies, giving you the skills and confidence to excel in today’s competitive job market.",
+      "Our courses are built around real industry needs, blending core concepts with practical implementation. Designed by experts, the curriculum ensures you stay updated with modern tools, technologies, and best practices. <br> <br> Through hands-on sessions, live projects, and real-world scenarios, we help you develop the skills and confidence required to succeed and grow in a competitive professional environment.",
   },
   {
-    image: hands,
-    title: "Hands On Experience",
+    image: "https://media.istockphoto.com/id/1909556003/photo/power-soft-skills-multi-skills-responsibility-hr-human-resources-concept-personal-attribute.jpg?s=612x612&w=0&k=20&c=rDlEMiMFgF61U87D0KY1lylkebfA6F1kbYX6ZPUpmaY=",
+    title: "Practical Skill Development",
     description:
-      "Gain practical knowledge through live projects, real-world case studies, and interactive sessions with industry experts.   <br>   We focus on applying concepts in real scenarios, helping you develop problem-solving skills and professional confidence. This approach ensures you’re job-ready, equipped with relevant experience, and prepared to handle workplace challenges with ease.",
+      "Develop industry-relevant skills through live projects, case studies, and guided practical sessions. <br> <br> Our approach focuses on applying knowledge in real situations, helping you build confidence, enhance problem-solving abilities, and gain the experience needed to succeed in a professional environment."
   },
   {
-    image: individual,
-    title: "Individual Guidance and Support",
+    image: "https://img.freepik.com/free-photo/medium-shot-people-learning_23-2149300715.jpg?semt=ais_hybrid&w=740&q=80",
+    title: "Personalized Mentorship",
     description:
-      "We provide personalized attention to every student, ensuring that learning needs and career goals are addressed effectively. Our mentors work closely with you, offering constructive feedback and guidance at every step. <br>    From solving subject-related doubts to giving career advice, we make sure you always have the right support. This one-on-one approach builds confidence, enhances skills, and prepares you to succeed in both academic and professional challenges.",
+      "Receive dedicated one-on-one guidance tailored to your learning needs and career goals. Our mentors work closely with you, providing continuous support, feedback, and direction at every stage of your journey. <br> <br> From clearing doubts to offering career insights, we ensure you always have the right guidance. This personalized approach helps build confidence, strengthen your skills, and prepare you for real academic and professional challenges."
   }
 ];
 
