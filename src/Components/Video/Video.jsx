@@ -27,10 +27,10 @@ heading:"They Started Like You. Now They Are Expert of Shop-Floor!.",
 description:`These are real success stories of learners who mastered CNC/VMC, worked on live machines, and stepped confidently into the industry.`,
 
 videoUrls:[
-"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-"http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+"https://res.cloudinary.com/dyiqsf4ze/video/upload/v1774530744/CNC_Machine_Learning_CNC_Career_Growth_Skills_SkillServe_240P_d5rrka.mp4",
+"https://res.cloudinary.com/dyiqsf4ze/video/upload/v1774530744/CNC_Machine_Course_Career_Strong_CNC_Career_Growth_SkillServe_144P_itybj0.mp4",
+"https://res.cloudinary.com/dyiqsf4ze/video/upload/v1774530745/CNC_Machine_Learning_Course_Success_Story_SkillServe_240P_ylg0hh.mp4",
+"https://res.cloudinary.com/dyiqsf4ze/video/upload/v1774530746/From_Student_to_Supervisor_My_Success_Story_with_Skill_Serve_shorts_successstory_cncmachine_240P_d87epb.mp4",
 
 ]
 
