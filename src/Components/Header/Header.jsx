@@ -83,7 +83,7 @@ const Header = () => {
         {showPopup && <PopupForm closePopup={closePopup} />}
 
         {/* NAVBAR */}
-        <div className={`navbar ${sticky ? 'sticky-nav' : ''}`}>
+        <div className={`navbar ${sticky ? 'sticky-nav' : 'sticky-nav'}`}>
             <img src={logo} alt="logo" />
 
             <div className="side-elements">

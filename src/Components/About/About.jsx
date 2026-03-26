@@ -20,10 +20,10 @@ const About = ({ data }) => {
   // fallback content
   const defaultAbout = {
     heading:
-      "We prepare you with practical skills to succeed and get <span>hired by leading companies</span>",
+      "Learn CNC/VMC the Right Way: <span> Live Machines, Real Projects, Real Jobs </span>",
 
     description:
-      "Our training programs are designed to transform you into a job-ready professional with real-world skills and hands-on experience. You don’t just learn concepts—you apply them through practical sessions, live projects, and industry-relevant scenarios. The training focuses on core technical skills, problem-solving abilities, and understanding real workplace environments. You will gain confidence by working on tasks that simulate actual industry challenges, making you prepared from day one. <br><br> We also integrate modern industry practices such as efficiency techniques, quality standards, and structured workflows to ensure you develop a professional mindset. This approach helps you not only learn faster but also perform better in real job roles. <br><br> If you are looking for practical exposure, strong fundamentals, and real career growth, this is the perfect place to start your journey.",
+      "Our CNC/VMC Operations & Programming course is designed to transform you into a truly job-ready professional. You don’t just learn—you earn a recognized NSQF Level certification (Digilocker Verified) while working on live machines and executing real industry projects. The training covers everything that actually matters on the shop floor, including machine operation, job setting & tooling, basic program reading, and essential safety & quality checks. As you progress, you gain hands-on expertise in machine setup, CNC/VMC operations, program editing, and process control—skills that industries actively look for. What makes this course stand out is its strong integration of best manufacturing practices like Lean, 5S, and Kaizen, helping you think beyond machines and work with efficiency, precision, and continuous improvement mindset. If you want real skills, real exposure, and real career growth—this is the place to start.",
 
     buttonText: "Read More"
   };
@@ -66,9 +66,7 @@ const About = ({ data }) => {
 
           <p
             dangerouslySetInnerHTML={{
-              __html: isExpanded
-                ? aboutData.description
-                : shortText + "..."
+              __html:aboutData.description
             }}
           />
 
