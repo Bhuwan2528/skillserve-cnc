@@ -3,7 +3,7 @@ import './Join.css'
 import { AiFillInstagram } from "react-icons/ai";
 import { FaFacebookF } from "react-icons/fa6";
 import { BsTwitterX } from "react-icons/bs";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { MdStarRate } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -47,29 +47,25 @@ const Join = () => {
         data-aos-anchor-placement="top-bottom"
         className="cards">
 
-            <a href='#'>
+            <a href='https://www.instagram.com/skill.serve/ '>
             <div className="card">
-                <span><AiFillInstagram /></span>
-                <h3>Follow</h3>
+                <span><AiFillInstagram /></span> 
                 <h3>Instagram</h3>
             </div></a>
 
-            <a href='#'>
+            <a href='https://www.facebook.com/p/SkillServe-61575759530831/'>
             <div className="card">
-                <span><FaFacebookF /></span>
-                <h3>Follow</h3>
+                <span><FaFacebookF /></span> 
                 <h3>Facebook</h3>
             </div></a>
 
-            <a href='#'><div className="card">
-                <span><BsTwitterX /></span>
-                <h3>Follow</h3>
-                <h3>Twitter</h3>
+            <a href='https://www.youtube.com/@skillserve23/featured'><div className="card">
+                <span><FaYoutube /></span>
+                <h3>Youtube</h3>
             </div></a>
 
-            <a href='#'><div className="card">
-                <span><FaLinkedinIn /></span>
-                <h3>Follow</h3>
+            <a href='https://www.linkedin.com/company/skillserve-in/'><div className="card">
+                <span><FaLinkedinIn /></span> 
                 <h3>LinkedIn</h3>
             </div></a>
 
