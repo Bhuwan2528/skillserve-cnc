@@ -79,14 +79,14 @@ playsInline
       {/* <button onClick={()=>{navigate('/testimonials')}} className="width-auto sq-btn">View All Testimonials</button> */}
 
       <button 
-        onClick={() => window.location.href = "tel:+918684031003"} 
+        onClick={() => window.location.href = "tel:+91 9484794843"} 
         className="width-auto sq-btn"
       >
         Call Now
       </button>
 
       <button 
-        onClick={() => window.open("https://wa.me/918684031003", "_blank")} 
+        onClick={() => window.open("https://wa.me/91 9484794843", "_blank")} 
         className="width-auto sq-btn"
       >
         Enquire Now

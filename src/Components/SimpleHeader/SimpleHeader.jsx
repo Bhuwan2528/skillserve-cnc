@@ -71,7 +71,7 @@ const SimpleHeader = ({ title, breadcrumb }) => {
         {/* FLOATING BUTTONS */}
 
         <a
-            href="https://wa.me/918684031003" 
+            href="https://wa.me/91 9484794843" 
             target="_blank"
             rel="noopener noreferrer"
         >
@@ -80,7 +80,7 @@ const SimpleHeader = ({ title, breadcrumb }) => {
             </span>
         </a>
 
-        <a href="tel:+918684031003" >
+        <a href="tel:+91 9484794843" >
             <span className="bottom-right-element bottom-element">
                 <MdCall />
             </span>

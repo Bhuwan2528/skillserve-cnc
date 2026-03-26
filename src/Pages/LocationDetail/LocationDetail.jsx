@@ -164,7 +164,7 @@ const LocationDetail = () => {
       {/* CTA BTNS  */}
       <div className="cta-buttons">
 
-        <a href="tel:+918684031003" className="cta-btn call-btn">
+        <a href="tel:+91 9484794843" className="cta-btn call-btn">
           <FiPhoneCall /> Call Now
         </a>
 
@@ -188,7 +188,7 @@ const LocationDetail = () => {
       {/* CTA BTNS  */}
       <div className="cta-buttons">
 
-        <a href="tel:+918684031003" className="cta-btn call-btn">
+        <a href="tel:+91 9484794843" className="cta-btn call-btn">
           <FiPhoneCall /> Call Now
         </a>
 
