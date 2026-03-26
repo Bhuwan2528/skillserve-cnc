@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import './Stats.css'
 import CountUp from 'react-countup'
 import { GiLaurelsTrophy } from "react-icons/gi";
-import { FaRegSmile } from "react-icons/fa";
+import { FaRegSmile, FaStar  } from "react-icons/fa";
 import { SiGoogleanalytics } from "react-icons/si";
 import { IoPeopleSharp } from "react-icons/io5";
 import AOS from "aos";
@@ -51,7 +51,7 @@ const Stats = () => {
                     <span><SiGoogleanalytics /></span>
                 </div>
                 <div className="card-right">
-                    <h3><CountUp start={0} end={10} duration={2} enableScrollSpy scrollSpyDelay={200}  /> LPA</h3>
+                    <h3><CountUp start={0} end={6} duration={2} enableScrollSpy scrollSpyDelay={200}  /> LPA</h3>
                 </div>
             </div>
             <p>Highest Package</p>
@@ -71,7 +71,7 @@ const Stats = () => {
                     <h3><CountUp start={0} end={250} duration={2} enableScrollSpy scrollSpyDelay={200}  />+</h3>
                 </div>
             </div>
-            <p>Industry Network</p>
+            <p>Placement Partner</p>
 
         </div>
 
@@ -81,13 +81,13 @@ const Stats = () => {
         className="stats-card">
             <div className="card-top">
                 <div className="card-left">
-                    <span><FaRegSmile /></span>
+                    <span><FaStar /></span>
                 </div>
                 <div className="card-right">
-                    <h3><CountUp start={0} end={40000} duration={3} enableScrollSpy scrollSpyDelay={200}  />+</h3>
+                    <h3>4.8/5</h3>
                 </div>
             </div>
-                    <p>Students Satisfied</p>
+                    <p>Customer Rating</p>
         </div>
 
     </div>

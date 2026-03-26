@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './About.css'
-import round from '../../assets/rounded-obj.png'
+import cncImg from '../../assets/cnc.jpg'
 import { TiStar } from "react-icons/ti";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { FaArrowRightLong } from "react-icons/fa6";
-import rahish from '../../assets/rahish.jpg'
 
+const About = ({ data }) => {
 
-const About = ({ data, openPopup }) => {
+  const [isExpanded, setIsExpanded] = useState(false);
 
   useEffect(() => {
     AOS.init({
@@ -17,20 +17,20 @@ const About = ({ data, openPopup }) => {
     });
   }, []);
 
-  // fallback content (agar server band ho)
+  // fallback content
   const defaultAbout = {
     heading:
       "We prepare you with practical skills to succeed and get <span>hired by leading companies</span>",
 
     description:
-      "Our comprehensive and advanced curriculum is designed to help you secure placements in top companies. SkillServe Academy focuses on practical, job-ready training through a blended learning approach that combines classroom sessions, digital tools, and hands-on experience in industry-simulated environments. </br> </br>   Aligned with Industry 4.0, LEAN, QMS, and the National Credit Framework (NCrF), our programs ensure real-world readiness while offering recognized, transferable credits—bridging the gap between learning and employment.",
+      "Our training programs are designed to transform you into a job-ready professional with real-world skills and hands-on experience. You don’t just learn concepts—you apply them through practical sessions, live projects, and industry-relevant scenarios. The training focuses on core technical skills, problem-solving abilities, and understanding real workplace environments. You will gain confidence by working on tasks that simulate actual industry challenges, making you prepared from day one. <br><br> We also integrate modern industry practices such as efficiency techniques, quality standards, and structured workflows to ensure you develop a professional mindset. This approach helps you not only learn faster but also perform better in real job roles. <br><br> If you are looking for practical exposure, strong fundamentals, and real career growth, this is the perfect place to start your journey.",
 
-    buttonText: "Read More",
-    buttonLink: "#"
+    buttonText: "Read More"
   };
 
   const aboutData = data || defaultAbout;
 
+  const shortText = aboutData.description.slice(0, 700);
 
   return (
     <>
@@ -44,43 +44,41 @@ const About = ({ data, openPopup }) => {
         </defs>
       </svg>
 
-
       <div className='about'>
 
+        {/* LEFT */}
         <div className="about-left">
 
           <span className='about-container'>
             <span className='icon'><TiStar /></span> About Us
           </span>
 
-          <img src={round} alt="" />
+          <img src={cncImg} alt="CNC Machine" className="about-img" />
+
         </div>
 
-
+        {/* RIGHT */}
         <div className="about-right">
 
           <h2
-            data-aos=""
             dangerouslySetInnerHTML={{ __html: aboutData.heading }}
           />
 
           <p
-            dangerouslySetInnerHTML={{ __html: aboutData.description }}
+            dangerouslySetInnerHTML={{
+              __html: isExpanded
+                ? aboutData.description
+                : shortText + "..."
+            }}
           />
 
-            <button
-              data-aos=""
-              className='btn'
-              onClick={openPopup}
-            >
-
-              <span>{aboutData.buttonText}</span>
-
-              <FaArrowRightLong className='btn-icon' />
-
-            </button>
-
-          
+          {/* <button
+            className='btn'
+            onClick={() => setIsExpanded(!isExpanded)}
+          >
+            <span>{isExpanded ? "Show Less" : aboutData.buttonText}</span>
+            <FaArrowRightLong className='btn-icon' />
+          </button> */}
 
         </div>
 

@@ -22,11 +22,9 @@ setPopupVideo(null)
 
 const defaultVideo = {
 
-heading:"Explore Our Learner’s Journey",
+heading:"They Started Like You. Now They Are Expert of Shop-Floor!.",
 
-description:`Join a prestigious group of SkillCircle alumni that includes strategists
-from the world's biggest brands and agencies, creative business owners,
-and powerful digital marketing leaders.`,
+description:`These are real success stories of learners who mastered CNC/VMC, worked on live machines, and stepped confidently into the industry.`,
 
 videoUrls:[
 "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",

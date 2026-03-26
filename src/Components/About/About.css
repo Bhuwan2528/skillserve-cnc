@@ -5,7 +5,7 @@
     flex-wrap: wrap;
 }
 .about-left{
-    width: 30%;
+    width: 36%;
     border-right: 2px solid rgba(225, 236, 247, 0.247) ;
     position: relative;
     overflow: hidden;
@@ -26,24 +26,19 @@
 .about-left img{
     display: block;
     margin: auto;
-    animation: spin 5s linear infinite;
-}
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    width: 90%;
+    border-radius: 30px;
 }
 
 .about-right{
     margin-top: 0.5rem;
-    flex-basis: 68%;
-    padding: 2%;
+    flex-basis: 62%;
+    padding: 1%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 .about-right h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 1px;
 }
 h2 span{
@@ -55,7 +50,7 @@ h2 span{
 }
 .about-right p{
     width: 90%;
-    font-size: 18px;
+    font-size: 17px;
     margin: 2rem 0;
     letter-spacing: 1px;
     line-height: 1.6;

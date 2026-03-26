@@ -24,7 +24,7 @@
 }
 
 .info-card:hover {
-  box-shadow: 0 0 20px#a200ffd0, 0 0 40px #ff0180d3;
+  box-shadow: 0 0 20px#ffe600d0, 0 0 40px #ff5101d3;
   transform: translateY(-5px);
 }
 

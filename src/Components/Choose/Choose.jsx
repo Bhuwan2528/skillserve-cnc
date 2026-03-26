@@ -11,21 +11,21 @@ import "aos/dist/aos.css";
 const fallbackChoose = [
   {
     image: "https://media.istockphoto.com/id/1919863292/photo/e-learning-education-internet-lessons-and-online-learning-with-webinars-video-tutorials.jpg?s=612x612&w=0&k=20&c=zWAqp6FGH-zm6b0Os_CssxubtrgKh1MyFeMgelFZbOg=",
-    title: "Industry-Focused Learning",
+    title: "Learn What Companies Actually Hire For",
     description:
-      "Our courses are built around real industry needs, blending core concepts with practical implementation. Designed by experts, the curriculum ensures you stay updated with modern tools, technologies, and best practices. <br> <br> Through hands-on sessions, live projects, and real-world scenarios, we help you develop the skills and confidence required to succeed and grow in a competitive professional environment.",
+      "At SkillServe, every course is designed around real industry requirements, not outdated theory. You learn CNC/VMC operations, programming, machine setup, quality checks, and process control exactly the way companies expect on the shop floor. The focus is simple: build skills that make you employable from day one, not just qualified on paper.",
   },
   {
-    image: "https://media.istockphoto.com/id/1909556003/photo/power-soft-skills-multi-skills-responsibility-hr-human-resources-concept-personal-attribute.jpg?s=612x612&w=0&k=20&c=rDlEMiMFgF61U87D0KY1lylkebfA6F1kbYX6ZPUpmaY=",
-    title: "Practical Skill Development",
+    image: "https://media.istockphoto.com/id/1294339664/photo/on-the-desk-personal-computer-showing-infrastructure-system-control-on-its-display-in.jpg?s=612x612&w=0&k=20&c=s9ZiRPmFKxRBdRu2EAeh-HI_m7YSVd8TxLzXyJpMoU0=",
+    title: "Train on Real Machines, Not Just Theory",
     description:
-      "Develop industry-relevant skills through live projects, case studies, and guided practical sessions. <br> <br> Our approach focuses on applying knowledge in real situations, helping you build confidence, enhance problem-solving abilities, and gain the experience needed to succeed in a professional environment."
+      "SkillServe is built as an industry-integrated practical academy where learning happens through doing. You work on real CNC/VMC machines, tools, and live projects in fully equipped labs. This hands-on exposure builds confidence, improves problem-solving, and prepares you for real workplace challenges—not just classroom understanding."
   },
   {
-    image: "https://img.freepik.com/free-photo/medium-shot-people-learning_23-2149300715.jpg?semt=ais_hybrid&w=740&q=80",
-    title: "Personalized Mentorship",
+    image: "https://t3.ftcdn.net/jpg/02/76/26/88/360_F_276268861_Y4ZHLZuZoXVkrXsjaHkaJn7xbE57dz81.jpg",
+    title: "Get Certified, Skilled & Job-Ready Faster",
     description:
-      "Receive dedicated one-on-one guidance tailored to your learning needs and career goals. Our mentors work closely with you, providing continuous support, feedback, and direction at every stage of your journey. <br> <br> From clearing doubts to offering career insights, we ensure you always have the right guidance. This personalized approach helps build confidence, strengthen your skills, and prepare you for real academic and professional challenges."
+      "With NSQF/NCrF-aligned programs, you don’t just gain skills, you earn nationally recognized certifications that add real career value. Combined with strong industry connections, 95% placement track record, and structured career growth support, SkillServe helps you move faster from learning to earning."
   }
 ];
 

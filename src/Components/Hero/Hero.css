@@ -14,7 +14,7 @@
 }
 
 .btn h4{ 
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
     letter-spacing: 1px;
 }
@@ -120,9 +120,9 @@
         padding-bottom: 0rem;
     }
     .btn h4{ 
-        font-size: 24px;
+        font-size: 20px;
         line-height: 1.6;
-        white-space: nowrap;
+        white-space: wrap;
         text-align: center;
         margin-inline: auto;
     }
@@ -163,10 +163,10 @@
         width: 95%;
     }
     .hero .btn{
-        width: 90%;
+        width: 95%;
     }
     .hero .btn h4{
-        font-size: 22px;
+        font-size: 16px;
         text-align: center;
     }
 }

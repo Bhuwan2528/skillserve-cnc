@@ -1,16 +1,16 @@
 import React from "react";
-import { FaCalendarAlt, FaClock, FaCertificate, FaUserTie, FaUsers, FaHandshake, FaAward, FaChalkboardTeacher } from "react-icons/fa";
+import { FaCalendarAlt, FaClock, FaCertificate, FaUserTie, FaUsers, FaHandshake, FaAward, FaChalkboardTeacher, FaBed  } from "react-icons/fa";
 import "./Info.css";
 
 const data = [
-  { icon: <FaCalendarAlt />, title: "Next Batch", subtitle: "Starting soon..." },
+  { icon: <FaCalendarAlt />, title: "Next Batch", subtitle: "April 2026" },
   { icon: <FaClock />, title: "Duration", subtitle: "Avg. 2 Months" },
-  { icon: <FaCertificate />, title: "Digilocker Certificate", subtitle: "1 Certificates" },
+  { icon: <FaCertificate />, title: "Digilocker Certificate", subtitle: "NSQF Certificate (Verified)" },
   { icon: <FaUserTie />, title: "Placement", subtitle: "100% Support" },
   { icon: <FaUsers />, title: "55,000+", subtitle: "Students Passed" },
-  { icon: <FaHandshake />, title: "750+", subtitle: "Placement Partners" },
-  { icon: <FaAward />, title: "10+", subtitle: "Years of Trust" },
-  { icon: <FaChalkboardTeacher />, title: "100+", subtitle: "Expert Mentors" },
+  { icon: <FaHandshake />, title: "250+", subtitle: "Placement Partners" },
+  { icon: <FaBed  />, title: "Free", subtitle: "Accomodation & Food" },
+  { icon: <FaChalkboardTeacher />, title: "50+", subtitle: "Expert Mentors" },
 ];
 
 const Info = () => {
