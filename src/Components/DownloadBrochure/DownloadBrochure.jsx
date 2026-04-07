@@ -22,7 +22,7 @@ Mobile: ${mobile}
 City: ${city}`;
 
     const whatsappURL =
-      `https://wa.me/919650539195?text=${encodeURIComponent(message)}`;
+      `https://wa.me/919484794843?text=${encodeURIComponent(message)}`;
 
     window.open(whatsappURL, "_blank");
 

@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
 import "./AdminForm.css";
 
-const HeroAboutVideo = () => {
+const ElectronicsHeroAboutVideo = () => {
 
 const [formData,setFormData]=useState({
 
+  // HERO
   startingPackage:"",
   heroText:"",
   typewriterWords:"",
-  placementText:"",
   heroImg:"",
 
+  // ABOUT
+  aboutImg:"",
   aboutHeading:"",
   aboutDescription:"",
-  aboutBtnText:"",
-  aboutBtnLink:"",
 
+  // VIDEO
   videoHeading:"",
   videoDescription:"",
   videoUrls:""
@@ -23,56 +24,46 @@ const [formData,setFormData]=useState({
 })
 
   const [loading, setLoading] = useState(false);
-
   const token = localStorage.getItem("token");
 
 
-  // Fetch existing data
+  // ✅ FETCH (FIXED)
   useEffect(() => {
 
     const fetchData = async () => {
 
       try {
 
-        const res = await fetch("http://localhost:5000/api/entries");
+        const res = await fetch("http://localhost:5000/api/electronics");
         const data = await res.json();
 
-if (data?.hero) {
-  setFormData(prev => ({
-    ...prev,
-    startingPackage: data.hero.startingPackage || "",
-    heroText: data.hero.heroText || "",
-    typewriterWords: data.hero.typewriterWords?.join(", ") || "",
-    placementText: data.hero.placementText || "",
-    heroImg: data.hero.heroImg || "",
-  }));
-}
+        if (data?.hero) {
+          setFormData(prev => ({
+            ...prev,
+            startingPackage: data.hero.startingPackage || "",
+            heroText: data.hero.heroText || "",
+            typewriterWords: data.hero.typewriterWords?.join(", ") || "",
+            heroImg: data.hero.heroImg || "",
+          }));
+        }
 
-if (data?.about) {
-  setFormData(prev => ({
-    ...prev,
-    aboutHeading: data.about.heading || "",
-    aboutDescription: data.about.description || "",
-    aboutBtnText: data.about.buttonText || "",
-    aboutBtnLink: data.about.buttonLink || ""
-  }));
-}
+        if (data?.about) {
+          setFormData(prev => ({
+            ...prev,
+            aboutImg: data.about.aboutImg || "",
+            aboutHeading: data.about.heading || "",
+            aboutDescription: data.about.description || "",
+          }));
+        }
 
-if(data?.video){
-
-  setFormData(prev=>({
-
-    ...prev,
-
-    videoHeading:data.video.heading || "",
-
-    videoDescription:data.video.description || "",
-
-    videoUrls:data.video.videoUrls?.join(", ") || ""
-
-  }))
-
-}
+        if(data?.video){
+          setFormData(prev=>({
+            ...prev,
+            videoHeading:data.video.heading || "",
+            videoDescription:data.video.description || "",
+            videoUrls:data.video.videoUrls?.join(", ") || ""
+          }))
+        }
 
       } catch (err) {
         console.log(err);
@@ -83,7 +74,6 @@ if(data?.video){
     fetchData();
 
   }, []);
-
 
 
   const handleChange = (e) => {
@@ -99,7 +89,6 @@ if(data?.video){
 const handleSubmit = async (e) => {
 
   e.preventDefault();
-
   setLoading(true);
 
   try {
@@ -109,29 +98,27 @@ const handleSubmit = async (e) => {
         startingPackage: formData.startingPackage,
         heroText: formData.heroText,
         typewriterWords: formData.typewriterWords
-          .split(",")
-          .map(word => word.trim()),
-        placementText: formData.placementText,
+          ? formData.typewriterWords.split(",").map(word => word.trim()).filter(Boolean)
+          : [],
         heroImg: formData.heroImg,
       },
 
       about: {
+        aboutImg: formData.aboutImg,
         heading: formData.aboutHeading,
         description: formData.aboutDescription,
-        buttonText: formData.aboutBtnText,
-        buttonLink: formData.aboutBtnLink
       },
 
       video:{
         heading:formData.videoHeading,
         description:formData.videoDescription,
         videoUrls:formData.videoUrls
-          .split(",")
-          .map(url=>url.trim())
+          ? formData.videoUrls.split(",").map(url=>url.trim()).filter(Boolean)
+          : []
       }
     };
 
-    const res = await fetch("http://localhost:5000/api/entries", {
+    const res = await fetch("http://localhost:5000/api/ev", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -145,7 +132,7 @@ const handleSubmit = async (e) => {
     if(res.ok){
       alert("Content Saved Successfully");
     }else{
-      alert("Failed to save content");
+      alert(data.message || "Failed to save content");
     }
 
     console.log(data);
@@ -173,12 +160,12 @@ const handleSubmit = async (e) => {
         <h2 className="section-title">Hero Section</h2>
 
         <div className="input-group">
-          <label>Starting Package</label>
+          <label>First String</label>
           <input
             type="text"
             name="startingPackage"
             value={formData.startingPackage}
-            placeholder='Starting Package : <span>5 Lacs - 6 Lacs</span>'
+            placeholder="India’s First Industry-Integrated Practical Academy"
             onChange={handleChange}
           />
         </div>
@@ -202,7 +189,7 @@ const handleSubmit = async (e) => {
               type="text"
               name="typewriterWords"
               value={formData.typewriterWords}
-              placeholder="Digital Marketer, Business Coach, Video Editor"
+              placeholder="ev Programmer, ev Operator"
               onChange={handleChange}
             />
           </div>
@@ -210,51 +197,46 @@ const handleSubmit = async (e) => {
         </div>
 
         <div className="input-group">
-          <label>Placement Text (HTML Allowed)</label>
-
-          <textarea
-            rows="4"
-            name="placementText"
-            value={formData.placementText}
-            placeholder='कोर्स पूरा होने के बाद <span>15 दिनों</span> के अंदर कंपनी द्वारा <span> प्लेसमेंट</span> – वरना <span class="fees">100% फीस वापसी!</span>'
+          <label>Hero Image</label>
+          <input
+            type="text"
+            name="heroImg"
+            value={formData.heroImg}
+            placeholder="Hero Image URL"
             onChange={handleChange}
           />
-
         </div>
 
-          <div className="input-group">
-            <label>Hero Image</label>
-            <input
-              type="text"
-              name="heroImg"
-              value={formData.heroImg}
-              placeholder="Hero Image URL"
-              onChange={handleChange}
-            />
-          </div>
-
         <br /><br />
-
 
         <div className="form-about">
           <h2 className="section-title">About Section</h2>
 
+          {/* ✅ NEW FIELD (model ke according) */}
           <div className="input-group">
-            <label>Main Heading</label>
-
+            <label>About Image</label>
             <input
               type="text"
-              name="aboutHeading"
-              value={formData.aboutHeading}
-              placeholder='Our comprehensive and advanced curriculum helps you to get <span>placed in Big Companies</span>'
+              name="aboutImg"
+              value={formData.aboutImg}
+              placeholder="About Image URL"
               onChange={handleChange}
             />
           </div>
 
+          <div className="input-group">
+            <label>Main Heading</label>
+            <input
+              type="text"
+              name="aboutHeading"
+              value={formData.aboutHeading}
+              placeholder='Learn ev/VMC the Right Way'
+              onChange={handleChange}
+            />
+          </div>
 
           <div className="input-group">
             <label>About Description</label>
-
             <textarea
               rows="4"
               name="aboutDescription"
@@ -263,36 +245,7 @@ const handleSubmit = async (e) => {
               onChange={handleChange}
             />
           </div>
-
-
-          <div className="row">
-
-            <div className="input-group">
-              <label>Button Content</label>
-
-              <input
-                type="text"
-                name="aboutBtnText"
-                value={formData.aboutBtnText}
-                placeholder="Button Text"
-                onChange={handleChange}
-              />
-            </div>
-
-
-            <div className="input-group">
-              <label>Button Link</label>
-
-              <input
-                type="text"
-                name="aboutBtnLink"
-                value={formData.aboutBtnLink}
-                placeholder="/about"
-                onChange={handleChange}
-              />
-            </div>
-
-          </div>
+          
         </div>
 
         <br /><br />
@@ -300,46 +253,37 @@ const handleSubmit = async (e) => {
         <div className="form-video">
           <h2 className="section-title">Video Section</h2>
 
-
           <div className="input-group">
-          <label>Main Heading</label>
-
-          <input
-          type="text"
-          name="videoHeading"
-          value={formData.videoHeading}
-          placeholder="Video Section Heading"
-          onChange={handleChange}
-          />
-
+            <label>Main Heading</label>
+            <input
+              type="text"
+              name="videoHeading"
+              value={formData.videoHeading}
+              placeholder="Video Section Heading"
+              onChange={handleChange}
+            />
           </div>
 
-
           <div className="input-group">
-          <label>Description</label>
-
-          <textarea
-          rows="4"
-          name="videoDescription"
-          value={formData.videoDescription}
-          placeholder="Video Description (HTML Allowed)"
-          onChange={handleChange}
-          />
-
+            <label>Description</label>
+            <textarea
+              rows="4"
+              name="videoDescription"
+              value={formData.videoDescription}
+              placeholder="Video Description (HTML Allowed)"
+              onChange={handleChange}
+            />
           </div>
 
-
           <div className="input-group">
-          <label>Video URLs</label>
-
-          <textarea
-          rows="3"
-          name="videoUrls"
-          value={formData.videoUrls}
-          placeholder="https://site.com/video1.mp4, https://site.com/video2.mp4"
-          onChange={handleChange}
-          />
-
+            <label>Video URLs</label>
+            <textarea
+              rows="3"
+              name="videoUrls"
+              value={formData.videoUrls}
+              placeholder="https://site.com/video1.mp4, https://site.com/video2.mp4"
+              onChange={handleChange}
+            />
           </div>
         </div>
 
@@ -353,4 +297,4 @@ const handleSubmit = async (e) => {
   );
 };
 
-export default HeroAboutVideo;
+export default ElectronicsHeroAboutVideo;

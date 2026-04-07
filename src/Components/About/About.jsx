@@ -24,13 +24,11 @@ const About = ({ data }) => {
 
     description:
       "Our CNC/VMC Operations & Programming course is designed to transform you into a truly job-ready professional. You don’t just learn—you earn a recognized NSQF Level certification (Digilocker Verified) while working on live machines and executing real industry projects. The training covers everything that actually matters on the shop floor, including machine operation, job setting & tooling, basic program reading, and essential safety & quality checks. As you progress, you gain hands-on expertise in machine setup, CNC/VMC operations, program editing, and process control—skills that industries actively look for. What makes this course stand out is its strong integration of best manufacturing practices like Lean, 5S, and Kaizen, helping you think beyond machines and work with efficiency, precision, and continuous improvement mindset. If you want real skills, real exposure, and real career growth—this is the place to start.",
-
-    buttonText: "Read More"
   };
 
   const aboutData = data || defaultAbout;
 
-  const shortText = aboutData.description.slice(0, 700);
+  console.log(aboutData.aboutImg)
 
   return (
     <>
@@ -53,7 +51,7 @@ const About = ({ data }) => {
             <span className='icon'><TiStar /></span> About Us
           </span>
 
-          <img src={cncImg} alt="CNC Machine" className="about-img" />
+          <img src={aboutData.aboutImg || cncImg} alt="CNC Machine" className="about-img" />
 
         </div>
 

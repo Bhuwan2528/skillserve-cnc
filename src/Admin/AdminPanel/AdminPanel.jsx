@@ -12,9 +12,9 @@ import {
 
 import logo from "../../assets/logo.png";
 
-import HeroAboutVideo from "../AdminForm/HeroAboutVideo";
+import HeroAboutVideo from "../CNC/HeroAboutVideo";
 import CoursesTrainner from "../AdminForm/CoursesTrainner";
-import ChooseFooter from "../AdminForm/ChooseFooter";
+import ChooseFooter from "../CNC/ChooseFooter";
 import LocationTable from "../LocationTable/LocationTable";
 
 import { useNavigate } from "react-router-dom";

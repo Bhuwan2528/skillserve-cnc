@@ -24,7 +24,7 @@ Name: ${formData.name}%0A
 Phone: ${formData.phone}%0A
 City: ${formData.city}`
 
-    const whatsappURL = `https://wa.me/919650539195?text=${message}`
+    const whatsappURL = `https://wa.me/919484794843?text=${message}`
 
     window.open(whatsappURL,"_blank")
   }

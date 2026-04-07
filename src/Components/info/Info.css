@@ -31,7 +31,7 @@
 .icon {
   font-size: 2rem;
   margin-bottom: 10px;
-  background: linear-gradient(45deg,#ff0180,#a200ff);
+  background: linear-gradient(45deg,#ffd901,#ff7300);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -41,9 +41,6 @@ h3 {
   font-weight: bold;
   margin: 5px 0;
   
-  /* background: linear-gradient(45deg, #ff0180,#a200ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
 }
 
 p {

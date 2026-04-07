@@ -52,8 +52,9 @@
     font-size: 30px;
     fill: rgb(255, 94, 0);
 }
-.card-right h3{
-    font-size: 30px;
+.card-top .card-right h3{
+    font-size: 28px;
+    white-space: nowrap;
     font-weight: 900;
 }
 .card-right{

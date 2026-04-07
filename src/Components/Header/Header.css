@@ -64,7 +64,7 @@
   color: black
 }
 .hero-text span {
-    background: linear-gradient(to right, #a200ff, #ff0180);
+    background: linear-gradient(to right, #ffc400, #ff0101);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;

@@ -51,7 +51,7 @@ const Stats = () => {
                     <span><SiGoogleanalytics /></span>
                 </div>
                 <div className="card-right">
-                    <h3><CountUp start={0} end={6} duration={2} enableScrollSpy scrollSpyDelay={200}  /> LPA</h3>
+                    <h3>3-6 LPA</h3>
                 </div>
             </div>
             <p>Highest Package</p>

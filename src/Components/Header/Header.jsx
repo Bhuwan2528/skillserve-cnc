@@ -16,26 +16,21 @@ import Choose from '../../Components/Choose/Choose'
 import Placement from '../Placement/Placement';
 import Counter from '../Counter/Counter';
 import Bottom from '../Bottom/Bottom';
-import Trainners from '../Trainners/Trainners';
 import Video from '../Video/Video';
 
 import PopupForm from "../../Components/PopupForm/PopupForm";
 import CNCModules from '../Modules/CNCModules';
 
 
-const Header = () => {
+const Header = ({ pageData }) => {
 
     const [sticky, setSticky] = useState(false);
-    const [pageData, setPageData] = useState(null);
     const [showPopup,setShowPopup] = useState(false);
-
-    // 🔥 NEW STATE
     const [showScrollTop, setShowScrollTop] = useState(false);
 
     const openPopup = () => setShowPopup(true);
     const closePopup = () => setShowPopup(false);
 
-    // 🔥 SCROLL HANDLER (MERGED)
     useEffect(() => {
         const handleScroll = () => {
             setSticky(window.scrollY > 50);
@@ -46,7 +41,6 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    // 🔥 SCROLL TO TOP FUNCTION
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
@@ -54,89 +48,63 @@ const Header = () => {
         });
     };
 
-    // 🔥 API FETCH
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch("http://localhost:5000/api/entries");
+    return (
+        <div className='header'>
 
-                if (!res.ok) throw new Error("API failed");
+            {showPopup && <PopupForm closePopup={closePopup} />}
 
-                const data = await res.json();
-                console.log("API DATA 👉", data);
+            <div className={`navbar ${sticky ? 'sticky-nav' : 'sticky-nav'}`}>
+                <img src={logo} alt="logo" />
 
-                setPageData(data);
-
-            } catch (err) {
-                console.log("FETCH ERROR 👉", err);
-            }
-        };
-
-        fetchData();
-    }, []);
-
-
-  return (
-    <div className='header'>
-
-        {/* POPUP */}
-        {showPopup && <PopupForm closePopup={closePopup} />}
-
-        {/* NAVBAR */}
-        <div className={`navbar ${sticky ? 'sticky-nav' : 'sticky-nav'}`}>
-            <img src={logo} alt="logo" />
-
-            <div className="side-elements">
-                <button className='btn' onClick={openPopup}>
-                    Apply Now
-                    <span className='btn-icon'>
-                        <FaArrowRightLong />
-                    </span>
-                </button>
+                <div className="side-elements">
+                    <button className='btn' onClick={openPopup}>
+                        Apply Now
+                        <span className='btn-icon'>
+                            <FaArrowRightLong />
+                        </span>
+                    </button>
+                </div>
             </div>
+
+            {/* FLOATING BUTTONS */}
+            <a href="https://wa.me/919484794843" target="_blank" rel="noopener noreferrer">
+                <span className="bottom-left-element bottom-element">
+                    <SiWhatsapp />
+                </span>
+            </a>
+
+            <a href="tel:+919484794843">
+                <span className="bottom-right-element bottom-element">
+                    <MdCall />
+                </span>
+            </a>
+
+            {showScrollTop && (
+                <span className="scroll-top-btn" onClick={scrollToTop}>
+                    <FaArrowUp />
+                </span>
+            )}
+
+            {/* CHILD COMPONENTS */}
+            <Hero data={pageData?.hero} openPopup={openPopup} />
+            <About openPopup={openPopup} data={pageData?.about}/>
+            <Bottom/>
+            <CNCModules/>
+            <Stats />
+            {pageData?.countdown?.isActive && (
+                <Counter 
+                    openPopup={openPopup} 
+                    data={pageData?.countdown}
+                />
+            )}
+            <Placement/>
+            <Video data={pageData?.video}/>
+            <Join/>
+            <Choose data={pageData?.choose}/>
+            <Footer data={pageData?.footer}/>
+
         </div>
-
-        {/* FLOATING BUTTONS */}
-        <a
-            href="https://wa.me/91 9484794843" 
-            target="_blank"
-            rel="noopener noreferrer"
-        >
-            <span className="bottom-left-element bottom-element">
-                <SiWhatsapp />
-            </span>
-        </a>
-
-        <a href="tel:+91 9484794843" >
-            <span className="bottom-right-element bottom-element">
-                <MdCall />
-            </span>
-        </a>
-
-        {/* 🔥 SCROLL TO TOP BUTTON */}
-        {showScrollTop && (
-            <span className="scroll-top-btn" onClick={scrollToTop}>
-                <FaArrowUp />
-            </span>
-        )}
-
-        {/* CHILD COMPONENTS */}
-        <Hero data={pageData?.hero} openPopup={openPopup} />
-        <About openPopup={openPopup} data={pageData?.about}/>
-        <Bottom/>
-        <CNCModules/>
-        {/* <Course openPopup={openPopup} data={pageData}/> */}
-        <Stats />
-        <Counter openPopup={openPopup}/>
-        <Placement/>
-        {/* <Trainners data={pageData?.trainers} openPopup={openPopup} /> */}
-        <Video data={pageData?.video}/>
-        <Join/>
-        <Choose data={pageData?.choose}/>
-        <Footer data={pageData?.footer}/>
-
-    </div>
-  )
+    )
 }
 
 export default Header;

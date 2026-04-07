@@ -3,16 +3,31 @@ import Header from "./Components/Header/Header";
 import { Route, Routes } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import Login from "./Admin/Login/Login";
-import HeroAboutVideo from "./Admin/AdminForm/HeroAboutVideo";
-import CoursesTrainner from "./Admin/AdminForm/CoursesTrainner";
-import ChooseFooter from "./Admin/AdminForm/ChooseFooter";
-import AdminPanel from "./Admin/AdminPanel/AdminPanel";
-import Location from "./Pages/Location/Location";
-import Testimonials from "./Pages/Testimonails/Testimonials";
-import LocationForm from "./Admin/AdminForm/LocationForm";
-import LocationDetail from "./Pages/LocationDetail/LocationDetail";
-import LocationTable from "./Admin/LocationTable/LocationTable";
-
+import HeroAboutVideo from "./Admin/CNC/CNCHeroAboutVideo";
+import ChooseFooter from "./Admin/CNC/CNCChooseFooter";
+import CNCPage from "./Pages/CNCPage";
+import CountDown from "./Admin/CNC/CNCCountDown";
+import EVHeroAboutVideo from "./Admin/EV/EVHeroAboutVideo";
+import EVChooseFooter from "./Admin/EV/EVChooseFooter";
+import EVCountDown from "./Admin/EV/EVCountDown";
+import EVPage from "./Pages/EVPage";
+import AutomationHeroAboutVideo from "./Admin/Automation/AutomationHeroAboutVideo";
+import AutomationChooseFooter from "./Admin/Automation/AutomationChooseFooter";
+import AutomationCountDown from "./Admin/Automation/AutomationCountDown";
+import DesignHeroAboutVideo from "./Admin/Design/DesignHeroAboutVideo";
+import DesignChooseFooter from "./Admin/Design/DesignChooseFooter";
+import DesignCountDown from "./Admin/Design/DesignCountDown";
+import DMHeroAboutVideo from "./Admin/DM/DMHeroAboutVideo";
+import DMChooseFooter from "./Admin/DM/DMChooseFooter";
+import DMCountDown from "./Admin/DM/DMCountDown";
+import ElectronicsHeroAboutVideo from "./Admin/Electronics/ElectronicsHeroAboutVideo";
+import ElectronicsChooseFooter from "./Admin/Electronics/ElectronicsChooseFooter";
+import ElectronicsCountDown from "./Admin/Electronics/ElectronicsCountDown";
+import AutomationPage from "./Pages/AutomationPage";
+import DesignPage from "./Pages/DesignPage copy";
+import DMPage from "./Pages/DMPage copy";
+import ElectronicsPage from "./Pages/ElectronicsPage";
+// import AdminPanel from "./Admin/AdminPanel/AdminPanel";
 const App = () => {
 
   const { pathname } = useLocation();
@@ -24,23 +39,46 @@ const App = () => {
 
   return (
     <Routes>
-
-      <Route path="/" element={<Header />} />
-      <Route path="/locations" element={<Location />} />
-      <Route path="/testimonials" element={<Testimonials />} />
+      <Route path="/" element={<CNCPage />} />
+      <Route path="/ev" element={<EVPage />} />
+      <Route path="/automation" element={<AutomationPage />} />
+      <Route path="/design" element={<DesignPage />} />
+      <Route path="/dm" element={<DMPage />} />
+      <Route path="/electronics" element={<ElectronicsPage />} />
 
       <Route path="/login" element={<Login />} />
-      <Route path="/admin-panel" element={<AdminPanel />} />
+      {/* <Route path="/admin-panel" element={<AdminPanel />} /> */}
       
+      {/* CNC */}
       <Route path="/admin-hero-about-video" element={<HeroAboutVideo />} />
-      <Route path="/admin-courses-trainner" element={<CoursesTrainner />} />
       <Route path="/admin-choose-footer" element={<ChooseFooter />} />
-      <Route path="/admin/location/new" element={<LocationForm />} />
-      <Route path="/admin/location/edit/:id" element={<LocationForm />} />
-      <Route path="/admin/location-table" element={<LocationTable />} />
-      <Route path="/location-detail" element={<LocationDetail />} />
-      
-      <Route path="/:slug" element={<LocationDetail />} />
+      <Route path="/admin-countdown" element={<CountDown />} />
+
+      {/* EV */}
+      <Route path="/ev-hero-about-video" element={<EVHeroAboutVideo />} />
+      <Route path="/ev-choose-footer" element={<EVChooseFooter />} />
+      <Route path="/ev-countdown" element={<EVCountDown />} />
+
+      {/* Automation */}
+      <Route path="/automation-hero-about-video" element={<AutomationHeroAboutVideo />} />
+      <Route path="/automation-choose-footer" element={<AutomationChooseFooter />} />
+      <Route path="/automation-countdown" element={<AutomationCountDown />} />
+
+      {/* design */}
+      <Route path="/design-hero-about-video" element={<DesignHeroAboutVideo />} />
+      <Route path="/design-choose-footer" element={<DesignChooseFooter />} />
+      <Route path="/design-countdown" element={<DesignCountDown />} />
+
+      {/* DM */}
+      <Route path="/dm-hero-about-video" element={<DMHeroAboutVideo />} />
+      <Route path="/dm-choose-footer" element={<DMChooseFooter />} /> 
+      <Route path="/dm-countdown" element={<DMCountDown />} />
+
+      {/* electronics */}
+      <Route path="/electronics-hero-about-video" element={<ElectronicsHeroAboutVideo />} />
+      <Route path="/electronics-choose-footer" element={<ElectronicsChooseFooter />} />
+      <Route path="/electronics-countdown" element={<ElectronicsCountDown />} />
+
 
     </Routes>
   );
